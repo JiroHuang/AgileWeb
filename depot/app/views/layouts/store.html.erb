@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>
+			Progprog Books Online Store
+		</title>
+		<%= stylesheet_link_tag "depot", :media => "all" %>
+	</head>
+	<body id = "store">
+	  <div id = "banner">
+		<%= image_tag("logo.png") %>
+		<%= @page_title || "Pragmatic Bookshelf" %>
+	  </div>
+	  <div id = "columns">
+	  	<div id = "side">
+	  		<a href="http://wwww.....">Home</a><br />
+	  		<a href="http://wwww...">Questions</a><br />
+	  		<a href="http://wwww...">News</a><br />
+	  		<a href="http://wwww...">Contact</a><br />	  		
+	  	</div>
+	  	<div id = "main">
+	  		<%= yield :layout %>
+	  	</div>
+	  </div>
+	</body>
+</html>
