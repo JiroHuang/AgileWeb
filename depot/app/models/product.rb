@@ -11,6 +11,9 @@ class Product < ActiveRecord::Base
 		# Product.find(:all, :order => "title") 
 		# find方法返回的是一个数组,find方法不同的是，where方法返回的结果不是数组而是ActiveRelation，
 		# 这意味着我们可以基于当前的查询结果继续设置条件进行查询。
+		# 如果使用find先查询再按title排序可以使用
+    	# @products = Product.find(:all)       
+   		# @products.sort! { |a,b| a.title.downcase < => b.title.downcase }    
 		Product.order("title asc").all
 	end
 
