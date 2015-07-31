@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'store/index'
+  post 'store/add_to_cart'
 
   resources :products
 
